@@ -59,4 +59,5 @@
     <convert type="MSNWeather">temperature_current</convert>
   </widget>
 </screen>
+   <!-- transparent -->
 </skin>
