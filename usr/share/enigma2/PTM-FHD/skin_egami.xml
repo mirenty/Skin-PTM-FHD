@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+
+  <!-- Templates -->
+
+<screen flags="wfNoBorder" name="AboutOE" position="fill"  backgroundColor="transparent">
+<panel name="Button2xSS"/>
+<panel name="menu2"/>
+<widget source="lab1" render="Label" position="62,133" size="822,80" font="Regular; 40" halign="left" foregroundColor="listbox" backgroundColor="black" transparent="1" />
+  <widget name="AboutScrollLabel" position="60,220" size="828,734" font="Regular; 32" halign="left" foregroundColor="grey" backgroundColor="transpBlack" transparent="1" noWrap="1" render="Listbox" />
+</screen>
+
+  <!-- EGGreenPanel -->
+
+ <screen name="EGGreenPanel" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+<panel name="Button4xSS" />
+ <panel name="menu3"/>
+  <widget backgroundColor="background" foregroundColor="foreground" position="20,155" size="1125,780" render="Listbox" scrollbarMode="showOnDemand" source="list" transparent="1" zPosition="13">
+    <convert type="TemplatedMultiContent">
+			      {"template": [
+			      MultiContentEntryText(pos = (195, 0), size = (915, 38), font=0, text = 0),
+			      MultiContentEntryText(pos = (195, 38), size = (915, 38), font=1, text = 1),
+			      MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (150, 60), png = 2, flags = BT_SCALE),
+			      ],
+			      "fonts": [gFont("Regular", 32),gFont("Regular", 26)],
+			      "itemHeight": 78
+			      }
+			  </convert>
+  </widget>
+</screen>
+
+  <!-- EgamiMainPanel -->
+  
+<screen name="EgamiMainPanel" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+<panel name="Button2xSS"/>
+<panel name="menu2"/>
+  <widget name="list" position="60,130" size="828,720" font="Regular; 32" itemHeight="72" scrollbarMode="showNever" backgroundColor="black" transparent="1" foregroundColor="foreground" />
+  <widget name="description" position="160,850" size="728,153" zPosition="10" font="Regular; 32" halign="left" foregroundColor="red" backgroundColor="black" transparent="1" />
+</screen>
+
+  <!-- ButtonSetup -->
+  
+<screen name="ButtonSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+<panel name="menu2"/>
+  <widget name="list" position="60,130" size="828,720" font="Regular;32" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="choosen" position="60,850" size="728,153" zPosition="10" font="Regular; 32" halign="left" foregroundColor="red" backgroundColor="black" transparent="1" />
+</screen>
+
+  <!-- ButtonSetupSelect -->
+  
+<screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+ <panel name="Button2xSS"/>
+<panel name="menu2"/>
+    <widget name="list" position="60,130" size="828,740" font="Regular;32" itemHeight="46" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="description" position="980,820" size="828,190" font="Regular; 28" halign="center" backgroundColor="black" borderColor="black" borderWidth="2" transparent="1" foregroundColor="green" />
+<widget name="choosen" position="60,880" size="728,153" zPosition="10" font="Regular; 32" halign="left" foregroundColor="red" backgroundColor="black" transparent="1" />
+ </screen>
+    
+  <!-- EG_InternetAddons -->
+  
+<screen name="EG_InternetAddons" title="" position="fill"  backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
+<panel name="Button2xSS"/>
+<panel name="menu2"/>
+  <widget name="menu" position="60,130" size="828,770" font="Regular;32" itemHeight="70" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" foregroundColor="foreground" />
+   </screen>
+   
+ <!-- EGAddonMenu -->
+
+ <screen name="EGAddonMenu" title="" position="fill"  backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
+<panel name="Button1xSS"/>
+<panel name="menu2"/>
+  <widget name="list" position="60,130" size="828,770" font="Regular; 32" itemHeight="72" scrollbarMode="showNever" backgroundColor="black" transparent="1" foregroundColor="foreground" />
+  </screen>
+
+ <!-- EG_PrzegladaczAddonow -->
+
+<screen name="EG_PrzegladaczAddonow" title="" position="fill" size="1920,1080" backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
+<panel name="Button2xSS"/>
+<panel name="menu2"/>
+  <widget name="menu" position="60,130" size="828,770" font="Regular;32" itemHeight="70" scrollbarMode="showOnDemand" backgroundColor="black" transparent="1" foregroundColor="foreground" />
+</screen>
+
+<!-- EmuManager -->
+
+<screen name="EmuManager"  position="fill"  flags="wfNoBorder" backgroundColor="transparent">
+  <panel name="Button4xSS" />
+  <panel name="menu2"/>
+  <widget name="choose_cam" position="80,155" size="810,55" font="Regular; 40" halign="center" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" zPosition="1" />
+  <widget name="config" position="80,225" size="810,40" font="Regular; 30" itemHeight="40" transparent="1" zPosition="2" backgroundColor="black" foregroundColor="green" />
+  <eLabel text="OK to Start" position="640,225" size="200,40" font="Regular; 30" halign="right" valign="center" foregroundColor="blue" backgroundColor="black" transparent="1" zPosition="2" />
+  <widget name="lb_channel" position="80,290" size="730,40" font="Regular; 35" zPosition="2" foregroundColor="yellow" backgroundColor="black" transparent="1" />
+  <widget name="lb_provider" position="80,345" size="730,40" font="Regular; 35" zPosition="2" backgroundColor="black" transparent="1" foregroundColor="red" />
+  <widget name="lb_aspectratio" position="80,400" size="730,40" font="Regular; 32" zPosition="2" foregroundColor="blue" backgroundColor="black" transparent="1" />
+  <widget name="lb_videosize" position="80,455" size="400,40" font="Regular; 32" zPosition="2" foregroundColor="green" backgroundColor="black" transparent="1" />
+  <widget name="ecminfo" position="80,510" size="730,400" font="Regular; 30" zPosition="2" foregroundColor="white" backgroundColor="black" transparent="1" />
+</screen>
+
+<screen name="EGAMIMainNews"  position="fill"  flags="wfNoBorder" backgroundColor="transparent">
+  <panel name="Button4xSS" />
+  <panel name="menu2"/>
+    <widget name="header" position="70,139" size="810,50" font="Regular; 36" halign="left" valign="center" foregroundColor="green" backgroundColor="black" transparent="1" zPosition="1" />
+  <widget source="menu" render="Listbox" position="65,205" size="825,710" scrollbarMode="showNever" transparent="1" zPosition="3">
+    <convert type="TemplatedMultiContent" transparent="0">
+				{"template": [
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 4), size = (50, 50), png = 2), # index 4 is the status pixmap
+					MultiContentEntryText(pos = (65, 6), size = (700, 44), font=0, color=0xdddddd, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+					],
+					"fonts": [gFont("Regular", 28),gFont("Regular", 20)],
+					"itemHeight": 55
+				}
+			</convert>
+  </widget>
+</screen>
+
+</skin>
+
+

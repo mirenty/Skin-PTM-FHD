@@ -1,0 +1,62 @@
+<skin>
+<screen name="InfoBar" title="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap alphatest="1" pixmap="Test_Skin/test/infobar1910x260.png" position="5,820" size="1910,260" zPosition="-3" />
+  <widget source="session.CurrentService" render="ZZPicon" position="30,883" size="400,170" alphatest="blend" backgroundColor="secondBG" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.CurrentService" render="ChannelNumber" borderWidth="2" position="455,840" size="105,40" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="transponderinfo" font="Regular;30" valign="top" halign="center" />
+  <widget source="session.CurrentService" render="Label" borderWidth="2" position="572,840" size="720,40" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="transponderinfo" font="Regular; 30" valign="top" halign="left">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" borderWidth="2" position="1508,843" size="385,30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;26" valign="top" halign="center">
+    <convert type="ClockToText">Date</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" borderWidth="2" position="1645,892" size="246,36" backgroundColor="transparent" noWrap="1" transparent="1" zPosition="1" foregroundColor="blue" font="Console; 34" valign="top" halign="center">
+    <convert type="ClockToText">Format:%H:%M:%S</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="290,843" size="120,30" font="Regular; 26" backgroundColor="background" transparent="1" foregroundColor="green">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" css="slider_transp_horizontal,slider_transp_pointer" position="455,962" size="1180,20" zPosition="8" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="455,903" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="left">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default;Proportional</convert>
+  </widget>
+  <widget source="session.Event_Now" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" render="EGEpg" position="572,903" size="900,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;36" halign="left">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1440,903" size="200,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" halign="right">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="455,993" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="left">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default;Proportional</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="572,993" size="900,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;36" halign="left">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1440,993" size="200,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="right">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <eLabel name="snr" text="SNR:" position="185,843" size="100,30" font="Regular; 26" halign="right" backgroundColor="background" transparent="1" foregroundColor="foreground" />
+  <widget source="session.FrontendInfo" render="Label" position="71,843" size="110,30" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" halign="right" font="Regular; 26" valign="top">
+    <convert type="FrontendInfo">STRING</convert>
+  </widget>
+  <!-- ................ -->
+  <ePixmap alphatest="blend" pixmap="Test_Skin/2/rec_off.png" position="35,840" size="40,40" zPosition="1" />
+  <widget source="session.RecordState" render="Pixmap" pixmap="Test_Skin/2/rec_on.png" position="35,840" size="40,40" zPosition="3" alphatest="blend">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <!-- ,,,,, -->
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="1669,926" size="120,120" source="session.MSNWeather" transparent="1" zPosition="8">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Test_Skin/msn2/,png</convert>
+  </widget>
+  <widget noWrap="1" font="Regular; 36" render="Label" position="1791,988" size="93,52" source="session.MSNWeather" zPosition="3" halign="left" transparent="1" foregroundColor="red">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+</screen>
+</skin>
